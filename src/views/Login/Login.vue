@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { LoginForm, RegisterForm } from './components'
+// import { LoginForm, RegisterForm } from './components'
+import { LoginForm } from './components'
 // import { ThemeSwitch } from '@/components/ThemeSwitch'
 // import { LocaleDropdown } from '@/components/LocaleDropdown'
 import { useI18n } from '@/hooks/web/useI18n'
@@ -23,9 +24,9 @@ const toRegister = () => {
   isLogin.value = false
 }
 
-const toLogin = () => {
-  isLogin.value = true
-}
+// const toLogin = () => {
+//   isLogin.value = true
+// }
 
 // const themeChange = () => {
 //   const color = getCssVar('--el-bg-color')
@@ -82,16 +83,16 @@ const toLogin = () => {
             <div
               class="h-full flex items-center m-auto w-[100%] at-2xl:max-w-500px at-xl:max-w-500px at-md:max-w-500px at-lg:max-w-500px"
             >
+              <!-- v-if="isLogin" -->
               <LoginForm
-                v-if="isLogin"
-                class="p-20px h-auto m-auto lt-xl:rounded-3xl lt-xl:light:bg-white"
+                class="p-20px h-auto m-auto lt-xl:rounded-3xl lt-xl:light:bg-white margin-top-15"
                 @to-register="toRegister"
               />
-              <RegisterForm
+              <!-- <RegisterForm
                 v-else
                 class="p-20px h-auto m-auto lt-xl:rounded-3xl lt-xl:light:bg-white"
                 @to-login="toLogin"
-              />
+              /> -->
             </div>
           </Transition>
         </div>
@@ -108,6 +109,10 @@ const toLogin = () => {
 
   .layout-hidden {
     overflow: hidden;
+  }
+
+  .margin-top-15 {
+    margin-top: 15px;
   }
 
   &__left {
