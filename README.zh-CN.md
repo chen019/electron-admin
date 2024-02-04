@@ -130,13 +130,6 @@ pnpm run build:pro
 | not support | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
 
 ## Donate
-
-如果你觉得这个项目有帮助，欢迎赞助以示支持~
-
-[Paypal Me](https://www.paypal.com/paypalme/ckl94)
-
-<img src="https://gitee.com/kailong110120130/my-image/raw/master/pay.jpg" />
-
 ## 许可证
 
 [MIT](./LICENSE)

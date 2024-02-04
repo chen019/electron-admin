@@ -130,17 +130,6 @@ Support modern browsers, not IE
 | not support | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
 
 ## Donate
-
-If you find this project helpful, welcome sponsorship to show your support~
-
-[Paypal Me](https://www.paypal.com/paypalme/ckl94)
-
-<img src="https://github.com/kailong321200875/my-image/raw/master/pay.jpg" />
-
-## Group
-
-If you want to join the technical communication group for discussion, please scan the code to join the group or add me as a friend
-
 ## License
 
 [MIT](./LICENSE)
