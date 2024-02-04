@@ -11,7 +11,7 @@ import { useRouter } from 'vue-router'
 import type { RouteLocationNormalizedLoaded, RouteRecordRaw } from 'vue-router'
 import { UserType } from '@/api/login/types'
 import { useValidator } from '@/hooks/web/useValidator'
-import { Icon } from '@/components/Icon'
+// import { Icon } from '@/components/Icon'
 import { useUserStore } from '@/store/modules/user'
 import { BaseButton } from '@/components/Button'
 
@@ -117,74 +117,74 @@ const schema = reactive<FormSchema[]>([
                   {t('login.login')}
                 </BaseButton>
               </div>
-              <div class="w-[100%] mt-15px">
+              {/* <div class="w-[100%] mt-15px">
                 <BaseButton class="w-[100%]" onClick={toRegister}>
                   {t('login.register')}
                 </BaseButton>
-              </div>
-            </>
-          )
-        }
-      }
-    }
-  },
-  {
-    field: 'other',
-    component: 'Divider',
-    label: t('login.otherLogin'),
-    componentProps: {
-      contentPosition: 'center'
-    }
-  },
-  {
-    field: 'otherIcon',
-    colProps: {
-      span: 24
-    },
-    formItemProps: {
-      slots: {
-        default: () => {
-          return (
-            <>
-              <div class="flex justify-between w-[100%]">
-                <Icon
-                  icon="ant-design:github-filled"
-                  size={iconSize}
-                  class="cursor-pointer ant-icon"
-                  color={iconColor}
-                  hoverColor={hoverColor}
-                />
-                <Icon
-                  icon="ant-design:wechat-filled"
-                  size={iconSize}
-                  class="cursor-pointer ant-icon"
-                  color={iconColor}
-                  hoverColor={hoverColor}
-                />
-                <Icon
-                  icon="ant-design:alipay-circle-filled"
-                  size={iconSize}
-                  color={iconColor}
-                  hoverColor={hoverColor}
-                  class="cursor-pointer ant-icon"
-                />
-                <Icon
-                  icon="ant-design:weibo-circle-filled"
-                  size={iconSize}
-                  color={iconColor}
-                  hoverColor={hoverColor}
-                  class="cursor-pointer ant-icon"
-                />
-              </div>
+              </div> */}
             </>
           )
         }
       }
     }
   }
+  // {
+  //   field: 'other',
+  //   component: 'Divider',
+  //   label: t('login.otherLogin'),
+  //   componentProps: {
+  //     contentPosition: 'center'
+  //   }
+  // },
+  // {
+  //   field: 'otherIcon',
+  //   colProps: {
+  //     span: 24
+  //   },
+  //   formItemProps: {
+  //     slots: {
+  //       default: () => {
+  //         return (
+  //           <>
+  //             <div class="flex justify-between w-[100%]">
+  //               <Icon
+  //                 icon="ant-design:github-filled"
+  //                 size={iconSize}
+  //                 class="cursor-pointer ant-icon"
+  //                 color={iconColor}
+  //                 hoverColor={hoverColor}
+  //               />
+  //               <Icon
+  //                 icon="ant-design:wechat-filled"
+  //                 size={iconSize}
+  //                 class="cursor-pointer ant-icon"
+  //                 color={iconColor}
+  //                 hoverColor={hoverColor}
+  //               />
+  //               <Icon
+  //                 icon="ant-design:alipay-circle-filled"
+  //                 size={iconSize}
+  //                 color={iconColor}
+  //                 hoverColor={hoverColor}
+  //                 class="cursor-pointer ant-icon"
+  //               />
+  //               <Icon
+  //                 icon="ant-design:weibo-circle-filled"
+  //                 size={iconSize}
+  //                 color={iconColor}
+  //                 hoverColor={hoverColor}
+  //                 class="cursor-pointer ant-icon"
+  //               />
+  //             </div>
+  //           </>
+  //         )
+  //       }
+  //     }
+  //   }
+  // }
 ])
 
-const iconSize = 30
+// const iconSize = 30
 
 const remember = ref(userStore.getRememberMe)
 
@@ -204,9 +204,9 @@ const { getFormData, getElFormExpose, setValues } = formMethods
 
 const loading = ref(false)
 
-const iconColor = '#999'
+// const iconColor = '#999'
 
-const hoverColor = 'var(--el-color-primary)'
+// const hoverColor = 'var(--el-color-primary)'
 
 const redirect = ref<string>('')
 
@@ -288,9 +288,9 @@ const getRole = async () => {
 }
 
 // 去注册页面
-const toRegister = () => {
-  emit('to-register')
-}
+// const toRegister = () => {
+//   emit('to-register')
+// }
 </script>
 
 <template>

@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { LoginForm, RegisterForm } from './components'
-import { ThemeSwitch } from '@/components/ThemeSwitch'
-import { LocaleDropdown } from '@/components/LocaleDropdown'
+// import { ThemeSwitch } from '@/components/ThemeSwitch'
+// import { LocaleDropdown } from '@/components/LocaleDropdown'
 import { useI18n } from '@/hooks/web/useI18n'
-import { getCssVar, underlineToHump } from '@/utils'
+import { underlineToHump } from '@/utils'
 import { useAppStore } from '@/store/modules/app'
 import { useDesign } from '@/hooks/web/useDesign'
 import { ref } from 'vue'
@@ -27,11 +27,11 @@ const toLogin = () => {
   isLogin.value = true
 }
 
-const themeChange = () => {
-  const color = getCssVar('--el-bg-color')
-  appStore.setMenuTheme(color)
-  appStore.setHeaderTheme(color)
-}
+// const themeChange = () => {
+//   const color = getCssVar('--el-bg-color')
+//   appStore.setMenuTheme(color)
+//   appStore.setHeaderTheme(color)
+// }
 </script>
 
 <template>
@@ -62,19 +62,21 @@ const themeChange = () => {
             </TransitionGroup>
           </div>
         </div>
-        <div class="flex-1 p-30px lt-sm:p-10px dark:bg-[var(--login-bg-color)] relative">
+        <div
+          class="flex-1 p-30px lt-sm:p-10px dark:bg-[var(--login-bg-color)] relative layout-hidden"
+        >
           <div
             class="flex justify-between items-center text-white at-2xl:justify-end at-xl:justify-end"
           >
             <div class="flex items-center at-2xl:hidden at-xl:hidden">
-              <img src="@/assets/imgs/logo.png" alt="" class="w-48px h-48px mr-10px" />
+              <img src="@/assets/imgs/telegram.png" alt="" class="w-40px h-40px mr-10px" />
               <span class="text-20px font-bold">{{ underlineToHump(appStore.getTitle) }}</span>
             </div>
-
+            <!-- 
             <div class="flex justify-end items-center space-x-10px">
               <ThemeSwitch @change="themeChange" />
               <LocaleDropdown class="lt-xl:text-white dark:text-white" />
-            </div>
+            </div> -->
           </div>
           <Transition appear enter-active-class="animate__animated animate__bounceInRight">
             <div
@@ -103,6 +105,10 @@ const themeChange = () => {
 
 .@{prefix-cls} {
   overflow: auto;
+
+  .layout-hidden {
+    overflow: hidden;
+  }
 
   &__left {
     &::before {
